@@ -33,7 +33,7 @@ O nome vem de *tuning* (afinar). Assim como um músico afina o instrumento para 
 
 - Modelagem de estoque:
 
-O estoque de instrumentos é caro, tem alto valor agregado e baixo giro. Errar na variedade dos produtos pode quebrar o caixa da loja. A análise de dados oriundos de redes sociais e grandes marcas do setor, identificando tendências de consumo, resolvem esse desafio e como consequência aumentam as vendas.
+O estoque de instrumentos é caro, tem alto valor agregado e baixo giro. Errar na variedade dos produtos pode quebrar o caixa da loja. A coleta e análise de dados das grandes marcas do setor e redes sociais, identifica tendências de consumo, podendo resolver esse desafio e por consequência aumentar as vendas.
 
 - Precificação inteligente:
 
@@ -42,7 +42,7 @@ Muitos clientes utilizam as lojas físicas apenas para testar os instrumentos e,
 - Segmentação de clientes:
 
 Existe uma dificuldade de saber em qual nível musical os clientes estão. Com base no seu histórico de compras, o Tuna traz
-um modelo preditivo que agrupa os clientes em níveis "Iniciante", "Intermediários" e "Profissionais", facilitando a correta recomendação dos produtos que futuramente poderão comprar.
+um modelo preditivo que classifica os clientes em níveis "Iniciantes", "Intermediários" e "Profissionais", facilitando a correta recomendação dos produtos que os clientes futuramente poderão comprar.
 
 ---
 
@@ -52,6 +52,17 @@ um modelo preditivo que agrupa os clientes em níveis "Iniciante", "Intermediár
 
 
 ---
+
+## 4. Características do aplicativo
+
+### 4.1 Requisitos funcionais
+
+| Código | Módulo | Descrição |
+|---|---|---|
+| RF01 | Autenticação | O sistema deve permitir login local com perfis de acesso (gestor e vendedor) |
+| RF02 | Produtos e estoque | O sistema deve permitir cadastrar, editar e excluir produtos (categoria, marca, modelo, custo, preço e quantidade) |
+| RF03 | Produtos e estoque | O sistema deve alertar quando um produto atingir o estoque mínimo e dar baixa automática a cada venda |
+| RF02 | Planejamento de estoque | O sistema deve calcular giro por categoria, identificar produtos parados e sugerir reposição com base nas vendas e tendências |
 
 
 
