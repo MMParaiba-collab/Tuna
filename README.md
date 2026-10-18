@@ -52,7 +52,7 @@ Existe uma dificuldade de saber em qual nível musical os clientes estão. Com b
 
 ---
 
-## 4. Características do aplicativo
+## 4. Características
 
 ### 4.1 Requisitos funcionais
 
@@ -80,6 +80,94 @@ Existe uma dificuldade de saber em qual nível musical os clientes estão. Com b
 ---
 
 ## 5. Modelo ER do banco de dados local
+
+<img width="1116" height="1048" alt="Untitled" src="https://github.com/user-attachments/assets/7eacb1c3-04f2-42c7-904f-d12fa6f9eab2" />
+
+O banco de dados local (SQLite) possui as seguintes entidades principais:
+* **produto:** Armazena o catálogo de itens da loja para funcionamento offline.
+* **tendencia:** Guarda dados de mercado (categorias e marcas) para análises e recomendações.
+* **preco_concorrente:** Registra os preços de e-commerces para comparar com os produtos da loja.
+* **cliente:** Cadastro dos clientes com sua respectiva classificação de nível.
+* **venda / item_venda:** Histórico de compras para rastreabilidade.
+* **sync_log:** Registro de auditoria das sincronizações com a nuvem.
+
+**Código fonte do diagrama (DBML):**
+
+```sql
+Table produto {
+  id integer [pk, increment]
+  codigo text [not null, unique]
+  nome text [not null]
+  categoria text [not null]
+  marca text
+  preco real [not null]
+  quantidade integer [not null, default: 0]
+  data_atualizacao text [not null]
+}
+
+Table tendencia {
+  id integer [pk, increment]
+  categoria text [not null]
+  marca text
+  indice_popularidade real [not null]
+  fonte text [not null]
+  data_coleta text [not null]
+}
+
+Table preco_concorrente {
+  id integer [pk, increment]
+  produto_id integer [not null]
+  concorrente text [not null]
+  preco real [not null]
+  fonte text [not null]
+  data_coleta text [not null]
+}
+
+Table cliente {
+  id integer [pk, increment]
+  nome text [not null]
+  telefone text [unique]
+  email text
+  nivel text [note: 'Iniciante, Intermediário ou Profissional']
+  data_atualizacao text [not null]
+}
+
+Table venda {
+  id integer [pk, increment]
+  cliente_id integer [not null]
+  data_venda text [not null]
+  total real [not null]
+}
+
+Table item_venda {
+  id integer [pk, increment]
+  venda_id integer [not null]
+  produto_id integer [not null]
+  quantidade integer [not null]
+  preco_unitario real [not null]
+}
+
+Table sync_log {
+  id integer [pk, increment]
+  tipo text [not null]
+  data_sync text [not null]
+  status text [not null]
+  registros integer [not null, default: 0]
+}
+
+Ref: preco_concorrente.produto_id > produto.id
+Ref: venda.cliente_id > cliente.id
+Ref: item_venda.venda_id > venda.id
+Ref: item_venda.produto_id > produto.id
+```
+
+---
+
+## 6. Wireframes
+
+
+
+
 
 
 
