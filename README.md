@@ -58,12 +58,12 @@ Existe uma dificuldade de saber em qual nível musical os clientes estão. Com b
 
 | Código | Módulo | Descrição |
 |---|---|---|
-| RF01 | Meu estoque | O sistema deve obter automaticamente, quando houver internet, a lista de todos os produtos da loja e gravá-la no banco local, mantendo-a atualizada |
+| RF01 | Meu estoque | O sistema deve obter automaticamente, quando houver internet, a lista de todos os produtos da loja e gravá-la no banco local, mantendo-a atualizada, também possibilitando a importação manual de dados |
 | RF02 | Meu estoque | O sistema deve obter dados de tendências do mercado quando houver internet e gravá-los no banco local |
 | RF03 | Meu estoque | O sistema deve exibir os resultados das análises dos cruzamentos de dados (loja x mercado), recomendando a inclusão de novos produtos, reposição e estratégia para conseguir vender produtos “encalhados” |
 | RF04 | Meu preço | O sistema deve obter os preços praticados por grandes e-commerces quando houver internet e gravá-los no banco local |
 | RF05 | Meu preço | O sistema deve comparar o preço de cada produto da loja com o preço dos e-commerces e alertar o lojista quando o produto estiver fora da margem competitiva |
-| RF06 | Meu cliente | O sistema deve obter automaticamente, quando houver internet, a lista de clientes e o histórico de compras da loja e gravá-los no banco local, mantendo-os atualizados |
+| RF06 | Meu cliente | O sistema deve obter automaticamente, quando houver internet, a lista de clientes e o histórico de compras da loja e gravá-los no banco local, mantendo-os atualizados, também possibilitando a importação manual de dados |
 | RF07 | Meu cliente | O sistema deve classificar os clientes em “Iniciante”, “Intermediário” e “Profissional” com base no histórico de compras e recomendar produtos adequados a cada nível |
 | RF08 | Sobre | O sistema deve exibir uma tela com o nome completo de todos os integrantes do grupo |
 
