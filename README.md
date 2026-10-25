@@ -12,9 +12,9 @@ Aplicativo móvel desenvolvido para o Projeto Integrador VI-B (Turma MA - TAS813
 4. [Características do aplicativo](#4-características-do-aplicativo)
 5. [Modelo ER do banco de dados local](#5-modelo-er-do-banco-de-dados-local)
 6. [Wireframe das telas](#6-wireframe-das-telas)
-7. [Geração do arquivo APK](#8-geração-do-arquivo-apk)
-8. [Tecnologias, bibliotecas e linguagens](#9-tecnologias-bibliotecas-e-linguagens)
-9. [Banco de dados local](#10-banco-de-dados-local)
+7. [Geração do arquivo APK](#7-geração-do-arquivo-apk)
+8. [Tecnologias, bibliotecas e linguagens](#8-tecnologias-bibliotecas-e-linguagens)
+9. [Banco de dados local](#9-banco-de-dados-local)
 
 ---
 
