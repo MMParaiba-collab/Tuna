@@ -180,6 +180,7 @@ Ref: item_venda.produto_id > produto.id
 
 **Dados utilizados:** `sync_log` (data e resultado da última sincronização).
 
+<p align="center">
 <img width="278" height="490" alt="PRINCIPAL" src="https://github.com/user-attachments/assets/be23db72-b245-470b-9ccd-087728a97cdc" />
 </p>
 
