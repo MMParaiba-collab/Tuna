@@ -51,7 +51,7 @@ Existe uma dificuldade de saber em qual nível musical os clientes estão. Com b
 
 ---
 
-## 4. Características
+## 4. Características do aplicativo
 
 ### 4.1 Requisitos funcionais
 
@@ -162,9 +162,7 @@ Ref: item_venda.produto_id > produto.id
 
 ---
 
-## 6. Wireframes
-
-<p align="center">
+## 6. Wireframe das telas
 
   ### 6.1 Tela principal (splash)
 
@@ -303,6 +301,18 @@ Ref: item_venda.produto_id > produto.id
 <p align="center">
 <img width="421" height="496" alt="WIREFRAMES - DIAGRAMA" src="https://github.com/user-attachments/assets/d56f60f2-5ffd-4946-9485-c3a0f9477bec" />
 </p>
+
+---
+
+## 7. Geração do arquivo APK
+
+---
+
+## 8. Tecnologias, bibliotecas e linguagens
+
+---
+
+## 9. Banco de dados local
 
 
 
