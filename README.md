@@ -166,6 +166,20 @@ Ref: item_venda.produto_id > produto.id
 ## 6. Wireframes
 
 <p align="center">
+
+  ### 6.1 Tela principal (splash)
+
+**Objetivo:** apresentar a marca e iniciar a sincronização dos dados.
+
+**Elementos principais:**
+- Selo "Offline-first", logo, nome e slogan do Tuna;
+- Botão "Abrir", que leva à tela Home;
+- Mensagem informando que os dados ficam disponíveis mesmo sem internet.
+
+**Requisitos atendidos:** RF01, RF02, RF04, RF06 (sincronização quando há internet) e RNF01.
+
+**Dados utilizados:** `sync_log` (data e resultado da última sincronização).
+
 <img width="278" height="490" alt="PRINCIPAL" src="https://github.com/user-attachments/assets/be23db72-b245-470b-9ccd-087728a97cdc" />
 </p>
 
