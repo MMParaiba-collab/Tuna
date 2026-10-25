@@ -175,16 +175,35 @@ Ref: item_venda.produto_id > produto.id
 <img width="288" height="476" alt="HOME" src="https://github.com/user-attachments/assets/01e8f1af-fe1a-41ec-a599-0642531f8ef4" />
 </p>
 
+---
+
+<p align="center">
 <img width="266" height="478" alt="ESTOQUE" src="https://github.com/user-attachments/assets/432af597-d056-4719-a7df-75939aad079e" />
+</p>
 
+---
+
+<p align="center">
 <img width="262" height="482" alt="PREÇO" src="https://github.com/user-attachments/assets/7d29a589-65b2-47e6-9a00-1b23aec11708" />
+</p>
 
+---
+
+<p align="center">
 <img width="272" height="479" alt="CLIENTE" src="https://github.com/user-attachments/assets/78dcf4c1-a1b4-4a59-bd43-ca892602a178" />
+</p>
 
+---
 
+<p align="center">
 <img width="269" height="492" alt="SOBRE" src="https://github.com/user-attachments/assets/83eb7e9b-f64f-4446-a51b-af4ffb255457" />
+</p>
 
+---
+
+<p align="center">
 <img width="421" height="496" alt="WIREFRAMES - DIAGRAMA" src="https://github.com/user-attachments/assets/d56f60f2-5ffd-4946-9485-c3a0f9477bec" />
+</p>
 
 
 
