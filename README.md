@@ -306,6 +306,121 @@ Ref: item_venda.produto_id > produto.id
 
 ## 7. Geração do arquivo APK
 
+O aplicativo Tuna será desenvolvido utilizando Ionic com Angular e TypeScript, juntamente com o Capacitor, responsável por integrar a aplicação ao ambiente nativo Android. Para gerar o arquivo APK, será utilizado o Android Studio, que permitirá realizar a compilação do projeto e disponibilizar o aplicativo para instalação em dispositivos compatíveis.
+
+---
+
+### 7.1. Ferramentas necessárias
+
+Para realizar a geração do APK, serão utilizadas as seguintes ferramentas:
+
+- **Node.js e npm:** necessários para executar os comandos do projeto e gerenciar suas dependências.
+- **Ionic CLI:** utilizado para executar os comandos de compilação da aplicação desenvolvida com Ionic e Angular.
+- **Capacitor:** responsável por integrar a aplicação web ao ambiente nativo Android.
+- **Android Studio:** utilizado para abrir o projeto Android, configurar a compilação e gerar o arquivo APK.
+- **Android SDK:** conjunto de ferramentas necessário para compilar e executar aplicativos Android.
+
+---  
+
+### 7.2. Etapas para geração do APK
+
+A geração do arquivo APK seguirá as etapas descritas abaixo:
+
+**1. Preparação do ambiente**
+
+Inicialmente, será necessário instalar as ferramentas de desenvolvimento, obter o código-fonte do projeto e instalar suas dependências. Após abrir o terminal na pasta raiz do projeto, será executado o comando:
+
+```bash
+npm install
+```
+
+Também será necessário garantir que o Ionic CLI e as ferramentas do Android estejam instalados e configurados corretamente.
+
+<br>
+
+**2. Compilação da aplicação**
+
+Será executado o comando abaixo para compilar a aplicação Ionic com Angular:
+
+```bash
+ionic build
+```
+
+Esse procedimento gera os arquivos da aplicação web que serão utilizados na versão móvel.
+
+<br>
+
+**3. Configuração e sincronização com o Capacitor**
+
+Caso a plataforma Android ainda não tenha sido adicionada ao projeto, será necessário realizar essa configuração inicialmente:
+
+```bash
+npx cap add android
+```
+
+Após a preparação da plataforma Android e a compilação da aplicação, será executado o seguinte comando:
+
+```bash
+npx cap sync android
+```
+
+Essa etapa copia os arquivos compilados da aplicação e sincroniza as configurações e os plugins necessários com o projeto nativo Android.
+
+<br>
+
+**4. Abertura do projeto Android**
+
+Em seguida, o projeto será aberto no Android Studio por meio do comando:
+
+```bash
+npx cap open android
+```
+
+No Android Studio, será realizada a verificação da configuração do projeto, do Android SDK e de suas dependências antes da compilação.
+
+<br>
+
+**5. Geração do arquivo APK**
+
+No Android Studio, será possível gerar o arquivo APK pelo menu Build. Para uma versão de testes, poderá ser utilizada a opção Build Bundle(s) / APK(s) > Build APK(s).
+
+Para uma versão de distribuição, deverá ser utilizada a opção Generate Signed Bundle / APK, selecionando APK e configurando a assinatura digital necessária para gerar uma versão assinada do aplicativo.
+
+<br>
+
+**6. Localização do arquivo gerado**
+
+Após a conclusão bem-sucedida da compilação, o arquivo APK poderá ser localizado dentro da estrutura do projeto Android, normalmente no diretório:
+`android/app/build/outputs/apk/`
+
+Os arquivos poderão estar organizados em subdiretórios, como debug ou release, dependendo do tipo de compilação realizada.
+
+O APK gerado poderá ser transferido para um dispositivo Android compatível para instalação e realização de testes.
+
+---
+
+**7.3. Considerações finais**
+
+A utilização do Ionic, Angular e TypeScript, em conjunto com o Capacitor e o Android Studio, permitirá transformar o código-fonte do Tuna em um aplicativo instalável em dispositivos Android.
+
+Após a geração do APK, serão realizados testes para verificar o funcionamento das telas, a navegação e as funcionalidades implementadas, incluindo o acesso aos dados armazenados localmente no banco SQLite.
+
+A geração de uma versão assinada será necessária para a distribuição da versão de lançamento. As chaves e credenciais utilizadas na assinatura deverão ser armazenadas de forma segura, sem serem publicadas no repositório do projeto.
+
+---
+
+**7.4. Referências**
+
+- [Ionic Framework – Desenvolvimento de aplicativos para Android](https://ionicframework.com/docs/developing/android)
+
+- [Ionic Framework – Implantação de aplicativos móveis com Angular](https://ionicframework.com/docs/angular/your-first-app/deploying-mobile)
+
+- [Capacitor – Configuração do ambiente de desenvolvimento](https://capacitorjs.com/docs/getting-started/environment-setup)
+
+- [Android Developers – Preparação e geração do aplicativo para distribuição](https://developer.android.com/build/build-for-release)
+
+- [Android Developers – Assinatura de aplicativos Android](https://developer.android.com/studio/publish/app-signing)
+
 ---
 
 ## 8. Tecnologias, bibliotecas e linguagens
