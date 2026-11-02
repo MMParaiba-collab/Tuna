@@ -425,6 +425,109 @@ A geração de uma versão assinada será necessária para a distribuição da v
 
 ## 8. Tecnologias, bibliotecas e linguagens
 
+O aplicativo Tuna será construído com as tecnologias listadas abaixo.
+
+---
+
+### 8.1. Linguagens de programação
+
+| Linguagem | Uso no Tuna | Link |
+|---|---|---|
+| **TypeScript** | Linguagem principal do aplicativo (telas, serviços, sincronização e regras de análise) | [typescriptlang.org](https://www.typescriptlang.org) |
+| **HTML5** | Estrutura das telas | [developer.mozilla.org](https://developer.mozilla.org/pt-BR/docs/Web/HTML) |
+| **SCSS / CSS3** | Estilização das telas | [sass-lang.com](https://sass-lang.com) |
+| **SQL (SQLite)** | Criação das tabelas e consultas do banco de dados local | [sqlite.org/lang](https://www.sqlite.org/lang.html) |
+
+---
+
+### 8.2. Frameworks
+
+| Framework | Uso no Tuna | Link |
+|---|---|---|
+| **Ionic Framework** | Componentes de interface mobile (cards, listas, barra de navegação inferior) | [ionicframework.com](https://ionicframework.com) |
+| **Angular** | Estrutura da aplicação (páginas, rotas e serviços) | [angular.dev](https://angular.dev) |
+| **Capacitor** | Integração com o Android nativo e geração do projeto para o APK | [capacitorjs.com](https://capacitorjs.com) |
+
+---
+
+### 8.3. Banco de dados local
+
+| Tecnologia | Uso no Tuna | Link |
+|---|---|---|
+| **SQLite** | Banco de dados local, no próprio celular, que mantém o app funcionando sem internet | [sqlite.org](https://www.sqlite.org) |
+| **@capacitor-community/sqlite** | Plugin que conecta o aplicativo ao banco SQLite | [github.com/capacitor-community/sqlite](https://github.com/capacitor-community/sqlite) |
+
+---
+
+### 8.4. Bibliotecas
+
+| Biblioteca | Uso no Tuna | Link |
+|---|---|---|
+| **Angular HttpClient** | Obtenção dos dados da loja, tendências e preços dos e-commerces quando houver internet (RF01, RF02, RF04 e RF06) | [angular.dev/guide/http](https://angular.dev/guide/http) |
+| **@capacitor/network** | Verificação da conexão com a internet para iniciar a sincronização | [capacitorjs.com/docs/apis/network](https://capacitorjs.com/docs/apis/network) |
+| **Chart.js** | Gráficos das telas Meu estoque, Meu preço e Meu cliente | [chartjs.org](https://www.chartjs.org) |
+
+---
+
+### 8.5. Ferramentas de desenvolvimento
+
+| Ferramenta | Uso no Tuna | Link |
+|---|---|---|
+| **Node.js e npm** | Execução do projeto e gerenciamento das dependências | [nodejs.org](https://nodejs.org) |
+| **Ionic CLI** | Criação, execução e compilação do projeto | [ionicframework.com/docs/cli](https://ionicframework.com/docs/cli) |
+| **Android Studio e Android SDK** | Emulador e geração do arquivo APK | [developer.android.com/studio](https://developer.android.com/studio) |
+| **Visual Studio Code** | Editor de código | [code.visualstudio.com](https://code.visualstudio.com) |
+| **dbdiagram.io (DBML)** | Modelagem do diagrama ER do banco de dados | [dbdiagram.io](https://dbdiagram.io) |
+| **Git e GitHub** | Controle de versão e repositório do projeto | [github.com](https://github.com) |
+
+---
+
+### 8.6. Instalação das dependências
+
+```bash
+npm install -g @ionic/cli
+npm install @capacitor-community/sqlite @capacitor/network chart.js
+```
+
+O aplicativo Tuna será construído com as tecnologias listadas abaixo.
+
+8.1. Linguagens de programação
+Linguagem	Uso no Tuna	Link
+TypeScript	Linguagem principal do aplicativo (telas, serviços, sincronização e regras de análise)	typescriptlang.org
+HTML5	Estrutura das telas	developer.mozilla.org
+SCSS / CSS3	Estilização das telas	sass-lang.com
+SQL (SQLite)	Criação das tabelas e consultas do banco de dados local	sqlite.org/lang
+
+8.2. Frameworks
+Framework	Uso no Tuna	Link
+Ionic Framework	Componentes de interface mobile (cards, listas, barra de navegação inferior)	ionicframework.com
+Angular	Estrutura da aplicação (páginas, rotas e serviços)	angular.dev
+Capacitor	Integração com o Android nativo e geração do projeto para o APK	capacitorjs.com
+
+8.3. Banco de dados local
+Tecnologia	Uso no Tuna	Link
+SQLite	Banco de dados local, no próprio celular, que mantém o app funcionando sem internet	sqlite.org
+@capacitor-community/sqlite	Plugin que conecta o aplicativo ao banco SQLite	github.com/capacitor-community/sqlite
+
+8.4. Bibliotecas
+Biblioteca	Uso no Tuna	Link
+Angular HttpClient	Obtenção dos dados da loja, tendências e preços dos e-commerces quando houver internet (RF01, RF02, RF04 e RF06)	angular.dev/guide/http
+@capacitor/network	Verificação da conexão com a internet para iniciar a sincronização	capacitorjs.com/docs/apis/network
+Chart.js	Gráficos das telas Meu estoque, Meu preço e Meu cliente	chartjs.org
+
+8.5. Ferramentas de desenvolvimento
+Ferramenta	Uso no Tuna	Link
+Node.js e npm	Execução do projeto e gerenciamento das dependências	nodejs.org
+Ionic CLI	Criação, execução e compilação do projeto	ionicframework.com/docs/cli
+Android Studio e Android SDK	Emulador e geração do arquivo APK	developer.android.com/studio
+Visual Studio Code	Editor de código	code.visualstudio.com
+dbdiagram.io (DBML)	Modelagem do diagrama ER do banco de dados	dbdiagram.io
+Git e GitHub	Controle de versão e repositório do projeto	github.com
+
+8.6. Instalação das dependências
+npm install -g @ionic/cli
+npm install @capacitor-community/sqlite @capacitor/network chart.js
+
 ---
 
 ## 9. Banco de dados local
