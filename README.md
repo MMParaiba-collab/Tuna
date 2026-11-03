@@ -495,7 +495,41 @@ npm install @capacitor-community/sqlite @capacitor/network chart.js
 
 ## 9. Banco de dados local
 
+Para armazenar os dados do aplicativo Tuna, será utilizado o SQLite, que permite salvar as informações diretamente no dispositivo. Dessa forma, o usuário poderá consultar os dados mesmo quando estiver sem acesso à internet.
 
+A implementação será feita utilizando o Ionic com Angular e Capacitor. Para conectar o aplicativo ao banco de dados, será utilizada a biblioteca `@capacitor-community/sqlite`.
+
+### Organização das tabelas
+
+O banco de dados será dividido em tabelas para facilitar o armazenamento e a consulta das informações:
+
+- **produto:** armazenará os produtos cadastrados, como código, nome, categoria, marca, preço e quantidade em estoque.
+- **tendencia:** guardará informações sobre tendências de mercado, incluindo categoria, marca, índice de popularidade, fonte e data da coleta.
+- **preco_concorrente:** armazenará os preços encontrados nos concorrentes, relacionando cada preço ao produto correspondente.
+- **cliente:** terá os dados dos clientes, como nome, telefone, e-mail e nível de classificação.
+- **venda:** registrará as vendas realizadas, com a data e o valor total.
+- **item_venda:** armazenará os produtos e as quantidades de cada venda.
+- **sync_log:** guardará o histórico das sincronizações, incluindo data, situação e quantidade de registros atualizados.
+
+### Como será feita a sincronização
+
+Quando o dispositivo estiver conectado à internet, o aplicativo poderá buscar informações atualizadas, como produtos, tendências, preços dos concorrentes e dados dos clientes.
+
+Depois de receber essas informações, o aplicativo fará a validação e salvará os dados no SQLite. Assim, as informações continuarão disponíveis para consulta mesmo quando o usuário estiver offline.
+
+Caso aconteça algum erro durante a sincronização, os dados que já estão salvos no dispositivo deverão ser preservados. Para isso, serão utilizadas transações no banco de dados. Se tudo ocorrer corretamente, as alterações serão confirmadas; caso contrário, serão canceladas.
+
+Também será registrado o histórico de cada sincronização, permitindo consultar quando ela aconteceu e se foi concluída com sucesso. O aplicativo deverá mostrar a data da última atualização dos dados.
+
+### Utilização dos dados no aplicativo
+
+As informações armazenadas serão utilizadas nas principais funcionalidades do Tuna:
+
+- **Meu Estoque:** permitirá consultar os produtos, suas quantidades e informações relacionadas às tendências.
+- **Meu Preço:** utilizará os preços dos produtos e dos concorrentes para facilitar a comparação.
+- **Meu Cliente:** permitirá consultar os clientes e seu histórico de compras, ajudando na classificação e na identificação de produtos que podem ser interessantes para cada cliente.
+
+Com essa estrutura, o aplicativo poderá manter as informações salvas no próprio dispositivo e continuar funcionando mesmo sem conexão com a internet.
 
 
 
