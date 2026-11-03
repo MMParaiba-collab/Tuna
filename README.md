@@ -495,11 +495,11 @@ npm install @capacitor-community/sqlite @capacitor/network chart.js
 
 ### 9. Banco de dados local
 
-Para armazenar os dados do aplicativo Tuna, será utilizado o SQLite, que permite salvar as informações diretamente no dispositivo. Dessa forma, o usuário poderá consultar os dados mesmo quando estiver sem acesso à internet.
+Para armazenar os dados do aplicativo Tuna, será utilizado o SQLite, que permite salvar informações diretamente no dispositivo. Dessa forma, o usuário poderá consultar os dados mesmo quando não tiver acesso à internet.
 
-A implementação será feita utilizando o Ionic com Angular e Capacitor. Para conectar o aplicativo ao banco de dados, será utilizada a biblioteca `@capacitor-community/sqlite`.
+A implementação será realizada utilizando Ionic com Angular e Capacitor. Para conectar o aplicativo ao banco de dados, será utilizada a biblioteca `@capacitor-community/sqlite`.
 
-### 9.1 Organização das tabelas
+### 9.1. Organização das tabelas
 
 O banco de dados será dividido em tabelas para facilitar o armazenamento e a consulta das informações:
 
@@ -511,7 +511,7 @@ O banco de dados será dividido em tabelas para facilitar o armazenamento e a co
 - **item_venda:** armazenará os produtos e as quantidades de cada venda.
 - **sync_log:** guardará o histórico das sincronizações, incluindo data, situação e quantidade de registros atualizados.
 
-### 9.2 Como será feita a sincronização
+### 9.2. Como será feita a sincronização
 
 Quando o dispositivo estiver conectado à internet, o aplicativo poderá buscar informações atualizadas, como produtos, tendências, preços dos concorrentes e dados dos clientes.
 
@@ -521,7 +521,7 @@ Caso aconteça algum erro durante a sincronização, os dados que já estão sal
 
 Também será registrado o histórico de cada sincronização, permitindo consultar quando ela aconteceu e se foi concluída com sucesso. O aplicativo deverá mostrar a data da última atualização dos dados.
 
-### 9.3Utilização dos dados no aplicativo
+### 9.3. Utilização dos dados no aplicativo
 
 As informações armazenadas serão utilizadas nas principais funcionalidades do Tuna:
 
