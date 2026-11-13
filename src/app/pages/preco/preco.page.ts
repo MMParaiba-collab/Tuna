@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { IonContent, IonIcon } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { pricetagOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-preco',
   templateUrl: './preco.page.html',
   styleUrls: ['./preco.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule],
+  standalone: true,
+  imports: [IonContent, IonIcon]
 })
-export class PrecoPage implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class PrecoPage {
+  constructor() {
+    addIcons({ pricetagOutline });
+  }
 }

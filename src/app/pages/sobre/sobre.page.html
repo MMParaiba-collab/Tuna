@@ -1,13 +1,67 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>sobre</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="sobre-content">
+  <div class="sobre-container">
+    
+    <header class="header-section">
+      <div class="brand-box">
+        <div class="brand-icon-wrapper">
+          <ion-icon name="information-circle-outline" class="header-icon"></ion-icon>
+        </div>
+        <span class="brand-name">Sobre</span>
+      </div>
+    </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sobre</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <section class="team-section">
+      <div class="section-header-text">
+        <h2 class="section-title">INTEGRANTES</h2>
+        <p class="section-subtitle">Grupo do Projeto</p>
+      </div>
+
+      <div class="members-list">
+        <div class="member-card">
+          <div class="member-avatar">M</div>
+          <span class="member-name">Matheus Mari Paraiba</span>
+          <div class="member-badge">1</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">G</div>
+          <span class="member-name">Gabriel Silveira Jaiger</span>
+          <div class="member-badge">2</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">J</div>
+          <span class="member-name">Jose Carlos Rojas Velasquez</span>
+          <div class="member-badge">3</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">J</div>
+          <span class="member-name">Julio Capellari Santos</span>
+          <div class="member-badge">4</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="brand-footer">
+      <div class="logo-circle-wrapper">
+        <svg class="tuning-fork-logo" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="27" y="34" width="5" height="16" rx="2.5" fill="#7C5DFA"/>
+          <path d="M36 24H48V60C48 66.6274 53.3726 72 60 72C66.6274 72 72 66.6274 72 60V24H84V60C84 71.1583 76.3822 80.5318 66 83.2266V92H78V102H42V92H54V83.2266C43.6178 80.5318 36 71.1583 36 60V24Z" fill="#121117"/>
+          <rect x="72" y="36" width="12" height="5" fill="#7C5DFA"/>
+          <rect x="72" y="45" width="12" height="5" fill="#7C5DFA"/>
+          <rect x="88" y="34" width="5" height="18" rx="2.5" fill="#7C5DFA"/>
+        </svg>
+      </div>
+
+      <h1 class="footer-title">Tuna</h1>
+
+      <div class="tagline-divider">
+        <span class="line"></span>
+        <span class="tagline-text">AFINE SEU NEGÓCIO</span>
+        <span class="line"></span>
+      </div>
+    </footer>
+
+  </div>
 </ion-content>

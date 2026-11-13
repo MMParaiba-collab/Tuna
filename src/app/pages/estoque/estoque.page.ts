@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { IonContent, IonIcon } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { cubeOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-estoque',
   templateUrl: './estoque.page.html',
   styleUrls: ['./estoque.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule],
+  standalone: true,
+  imports: [IonContent, IonIcon]
 })
-export class EstoquePage implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class EstoquePage {
+  constructor() {
+    addIcons({ cubeOutline });
+  }
 }

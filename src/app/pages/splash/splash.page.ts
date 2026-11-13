@@ -1,16 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { IonContent, IonIcon } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { arrowForwardOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.page.html',
   styleUrls: ['./splash.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule],
+  standalone: true,
+  imports: [IonContent, IonIcon]
 })
-export class SplashPage implements OnInit {
-  constructor() {}
+export class SplashPage {
 
-  ngOnInit() {}
+  constructor(private router: Router) {
+    addIcons({ arrowForwardOutline });
+  }
+
+  entrarNoNegocio() {
+    this.router.navigateByUrl('/tabs/home', { replaceUrl: true });
+  }
 }

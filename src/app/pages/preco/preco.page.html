@@ -1,13 +1,126 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>preco</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="preco-content">
+  <div class="preco-container">
+    
+    <header class="header-section">
+      <div class="brand-box">
+        <div class="brand-icon-wrapper">
+          <ion-icon name="pricetag-outline" class="header-icon"></ion-icon>
+        </div>
+        <span class="brand-name">Meu preço</span>
+      </div>
+    </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">preco</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="status-bar">
+      <div class="sync-info">
+        <span class="sync-dot"></span>
+        <span>Atualizado em 22/05, 14:30</span>
+      </div>
+    </div>
+
+    <div class="summary-cards-grid">
+      <div class="summary-card">
+        <span class="summary-number">8</span>
+        <span class="summary-label">fora da margem</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-number">34</span>
+        <span class="summary-label">dentro da margem</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-number highlight">+14</span>
+        <span class="summary-label">Diferença</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2 class="card-section-title">Diferença vs. mercado (%)</h2>
+      <div class="chart-subtitle">margem 10%</div>
+
+      <div class="bars-chart-container">
+        <div class="target-line"></div>
+
+        <div class="bar-row">
+          <span class="bar-label">Violão G. N1</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width: 85%;"></div>
+          </div>
+          <span class="bar-value">+19%</span>
+        </div>
+
+        <div class="bar-row">
+          <span class="bar-label">Pedal Boss D</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width: 65%;"></div>
+          </div>
+          <span class="bar-value">+14%</span>
+        </div>
+
+        <div class="bar-row">
+          <span class="bar-label">Cordas Sol</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width: 55%;"></div>
+          </div>
+          <span class="bar-value">+12%</span>
+        </div>
+
+        <div class="bar-row">
+          <span class="bar-label">Teclado Mi2</span>
+          <div class="bar-track">
+            <div class="bar-fill low-margin" style="width: 25%;"></div>
+          </div>
+          <span class="bar-value">+4%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2 class="card-section-title">Alertas de preço</h2>
+      
+      <div class="alerts-list">
+        <!-- Alerta 1 -->
+        <div class="alert-item">
+          <div class="alert-info">
+            <h3 class="item-name">Violão G. N1</h3>
+            <p class="store-price">Loja R$ 1.490</p>
+            <p class="market-price">Mercado R$ 1.250 · Mercado Livre</p>
+          </div>
+          <div class="alert-trend">
+            <svg class="trend-line-svg" viewBox="0 0 50 20" fill="none">
+              <path d="M2 15L15 12L28 14L48 4" stroke="#121117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="trend-badge pos">+19%</span>
+          </div>
+        </div>
+
+        <div class="alert-item">
+          <div class="alert-info">
+            <h3 class="item-name">Pedal Boss D</h3>
+            <p class="store-price">Loja R$ 570</p>
+            <p class="market-price">Mercado R$ 500 · Amazon</p>
+          </div>
+          <div class="alert-trend">
+            <svg class="trend-line-svg" viewBox="0 0 50 20" fill="none">
+              <path d="M2 16L14 13L26 15L48 5" stroke="#121117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="trend-badge pos">+14%</span>
+          </div>
+        </div>
+
+        <div class="alert-item">
+          <div class="alert-info">
+            <h3 class="item-name">Cordas Sol</h3>
+            <p class="store-price">Loja R$ 112</p>
+            <p class="market-price">Mercado R$ 100 · Shopee</p>
+          </div>
+          <div class="alert-trend">
+            <svg class="trend-line-svg" viewBox="0 0 50 20" fill="none">
+              <path d="M2 14L15 11L27 13L48 6" stroke="#121117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="trend-badge pos">+12%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </ion-content>

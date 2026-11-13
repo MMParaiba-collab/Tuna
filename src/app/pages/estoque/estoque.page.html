@@ -1,13 +1,108 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>estoque</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="estoque-content">
+  <div class="estoque-container">
+    
+    <header class="header-section">
+      <div class="brand-box">
+        <div class="brand-icon-wrapper">
+          <ion-icon name="cube-outline" class="header-icon"></ion-icon>
+        </div>
+        <span class="brand-name">Meu estoque</span>
+      </div>
+    </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">estoque</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="status-bar">
+      <div class="sync-info">
+        <span class="sync-dot"></span>
+        <span>Atualizado em 22/05, 14:30</span>
+      </div>
+    </div>
+
+    <div class="summary-cards-grid">
+      <div class="summary-card">
+        <span class="summary-number">12</span>
+        <span class="summary-label">em alta</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-number">5</span>
+        <span class="summary-label">encalhados</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-number">1</span>
+        <span class="summary-label">para repor</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2 class="card-section-title">Produtos por situação</h2>
+      
+      <div class="chart-flex-box">
+        <div class="legend-list">
+          <div class="legend-item">
+            <span class="dot high"></span>
+            <span class="legend-text">Em alta</span>
+          </div>
+          <div class="legend-item">
+            <span class="dot neutral"></span>
+            <span class="legend-text">Sem tendência</span>
+          </div>
+          <div class="legend-item">
+            <span class="dot low"></span>
+            <span class="legend-text">Encalhados</span>
+          </div>
+        </div>
+
+        <div class="donut-chart-wrapper">
+          <svg class="donut-svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#F4F4F6" stroke-width="14"></circle>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#121117" stroke-width="14" 
+                    stroke-dasharray="150 240" stroke-dashoffset="0"></circle>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#7C5DFA" stroke-width="14" 
+                    stroke-dasharray="65 240" stroke-dashoffset="-150"></circle>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#E4E4E7" stroke-width="14" 
+                    stroke-dasharray="24 240" stroke-dashoffset="-215"></circle>
+          </svg>
+          <span class="chart-label label-12">12</span>
+          <span class="chart-label label-5">5</span>
+          <span class="chart-label label-1">1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2 class="card-section-title">Recomendações</h2>
+      <ul class="bullet-list">
+        <li>
+          <span class="bullet-dot"></span>
+          <span>Repor Encordoamento Elixir p/ Guitarra 0.9</span>
+        </li>
+        <li>
+          <span class="bullet-dot"></span>
+          <span>Repor Kit de Palhetas Solar</span>
+        </li>
+        <li>
+          <span class="bullet-dot"></span>
+          <span>Repor Pratos Solar</span>
+        </li>
+        <li>
+          <span class="bullet-dot"></span>
+          <span>Revisar Piano Yamaha (1 ano em estoque)</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h2 class="card-section-title">Oportunidades</h2>
+      <ul class="bullet-list">
+        <li>
+          <span class="bullet-dot purple"></span>
+          <span>Pedal Distortion Boss GT-1</span>
+        </li>
+        <li>
+          <span class="bullet-dot purple"></span>
+          <span>Bateria MasterDrums TCH-45P</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </ion-content>

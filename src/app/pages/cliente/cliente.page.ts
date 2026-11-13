@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { IonContent, IonIcon } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { peopleOutline, bulbOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.page.html',
   styleUrls: ['./cliente.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule],
+  standalone: true,
+  imports: [IonContent, IonIcon]
 })
-export class ClientePage implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class ClientePage {
+  constructor() {
+    addIcons({ peopleOutline, bulbOutline });
+  }
 }
