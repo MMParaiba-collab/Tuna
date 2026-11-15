@@ -1,118 +1,15 @@
 import { a as __exportAll, i as i$12, r as h$19, t as n$16 } from "./p-D0YpjgON-CQ6tjdDc.js";
-import { $n as Output, $o as ɵɵloadQuery, Ac as Injector, Al as ɵɵdefineInjectable, Ao as ɵɵgetCurrentView, Bl as ɵɵrestoreView, Bo as ɵɵinjectAttribute, Bt as computed, Ca as ɵɵclassProp, Cc as EventEmitter, Co as ɵɵelementStart, Dn as Host, En as ElementRef, Er as ViewContainerRef, Fn as Injectable, Gl as operate, Gs as ɵɵtemplate, Hl as BehaviorSubject, In as Input, Jl as identity, Kc as RuntimeError, Kl as Observable, M as createComponent, Mr as afterNextRender, O as booleanAttribute, Oa as ɵɵcontentQuery, Pl as ɵɵinject, Pn as Inject, Ql as Subscription, Qn as Optional, Qo as ɵɵlistener, Rc as NgZone, S as ViewChild, So as ɵɵelementEnd, Tl as signal, Ul as Subject, Vl as map, Wi as setClassMetadata, Wl as createOperatorSubscriber, Xc as Version, Xt as APP_INITIALIZER, _c as DOCUMENT, _l as makeEnvironmentProviders, a as ContentChildren, aa as ɵɵControlFeature, al as formatRuntimeError, an as ChangeDetectionStrategy, ao as ɵɵdefineNgModule, au as __decorate, bi as isSubscribable, ca as ɵɵInheritDefinitionFeature, cn as Component, co as ɵɵdirectiveInject, cs as ɵɵprojectionDef, da as ɵɵadvance, dl as inject, do as ɵɵdomElementContainerEnd, dr as Service, es as ɵɵnextContext, eu as isFunction, fo as ɵɵdomElementContainerStart, ft as reflectComponentType, i as ContentChild, il as effect, io as ɵɵdefineDirective, ir as Renderer2, jl as ɵɵdefineInjector, jo as ɵɵgetInheritedFactory, kc as InjectionToken, kn as HostListener, la as ɵɵNgOnChangesFeature, ls as ɵɵproperty, nn as Attribute, ol as forwardRef, pr as SkipSelf, qn as NgModule, qt as untracked, r as ChangeDetectorRef, ro as ɵɵdefineComponent, so as ɵɵdefineService, ss as ɵɵprojection, su as __read, tn as ApplicationRef, ua as ɵɵProvidersFeature, uc as ɵɵviewQuery, ur as Self, vc as DestroyRef, vr as TemplateRef, wn as Directive, xc as EnvironmentInjector, xs as ɵɵqueryRefresh, ya as ɵɵattribute, yi as isPromise, yo as ɵɵelementContainer, zl as ɵɵresetView } from "./core-DTX0Y4o3.js";
-import { $ as PRIMARY_OUTLET, G as NavigationCancel, J as NavigationError, M as ActivatedRoute, Mt as createObject, Nt as argsArgArrayOrObject, Pt as mapOneOrManyArgs, Z as NavigationStart, bt as UrlSerializer, f as RouterLink, jt as combineLatest, lt as Router, z as ChildrenOutletContexts } from "./router-Dy3iYRHz.js";
-import { $ as mergeMap, H as NgTemplateOutlet, J as getDOM, Q as filter, U as Location, V as NgIf, W as LocationStrategy, Y as switchMap, at as popResultSelector, et as of, it as isArrayLike, rt as innerFrom, tt as from, z as CommonModule } from "./platform-browser-DsgeSiMa.js";
+import { __decorate } from "./tslib.js";
+import { $n as Output, $o as ɵɵloadQuery, Ac as Injector, Al as ɵɵdefineInjectable, Ao as ɵɵgetCurrentView, Bl as ɵɵrestoreView, Bo as ɵɵinjectAttribute, Bt as computed, Ca as ɵɵclassProp, Cc as EventEmitter, Co as ɵɵelementStart, Dn as Host, En as ElementRef, Er as ViewContainerRef, Fn as Injectable, Gs as ɵɵtemplate, In as Input, Kc as RuntimeError, M as createComponent, Mr as afterNextRender, O as booleanAttribute, Oa as ɵɵcontentQuery, Pl as ɵɵinject, Pn as Inject, Qn as Optional, Qo as ɵɵlistener, Rc as NgZone, S as ViewChild, So as ɵɵelementEnd, Tl as signal, Wi as setClassMetadata, Xc as Version, Xt as APP_INITIALIZER, _c as DOCUMENT, _l as makeEnvironmentProviders, a as ContentChildren, aa as ɵɵControlFeature, al as formatRuntimeError, an as ChangeDetectionStrategy, ao as ɵɵdefineNgModule, bi as isSubscribable, ca as ɵɵInheritDefinitionFeature, cn as Component, co as ɵɵdirectiveInject, cs as ɵɵprojectionDef, da as ɵɵadvance, dl as inject, do as ɵɵdomElementContainerEnd, dr as Service, es as ɵɵnextContext, fo as ɵɵdomElementContainerStart, ft as reflectComponentType, i as ContentChild, il as effect, io as ɵɵdefineDirective, ir as Renderer2, jl as ɵɵdefineInjector, jo as ɵɵgetInheritedFactory, kc as InjectionToken, kn as HostListener, la as ɵɵNgOnChangesFeature, ls as ɵɵproperty, nn as Attribute, ol as forwardRef, pr as SkipSelf, qn as NgModule, qt as untracked, r as ChangeDetectorRef, ro as ɵɵdefineComponent, so as ɵɵdefineService, ss as ɵɵprojection, tn as ApplicationRef, ua as ɵɵProvidersFeature, uc as ɵɵviewQuery, ur as Self, vc as DestroyRef, vr as TemplateRef, wn as Directive, xc as EnvironmentInjector, xs as ɵɵqueryRefresh, ya as ɵɵattribute, yi as isPromise, yo as ɵɵelementContainer, zl as ɵɵresetView } from "./core-BZW6NvO3.js";
+import { Mn as from, Qn as Subject, Xt as filter, Zn as BehaviorSubject, b as switchMap, cn as forkJoin, gt as distinctUntilChanged, hn as combineLatest, jn as of, sn as fromEvent, ur as Subscription, vn as map } from "./esm5-O02WYnMD.js";
+import { C as CommonModule, Nt as Location, Pt as LocationStrategy, Ut as getDOM, V as NgIf, Z as NgTemplateOutlet } from "./common-D-JdArM9.js";
+import { $ as PRIMARY_OUTLET, G as NavigationCancel, J as NavigationError, M as ActivatedRoute, Z as NavigationStart, bt as UrlSerializer, f as RouterLink, lt as Router, z as ChildrenOutletContexts } from "./router-DWzh1Xdv.js";
 import { a as J$5, c as Xt, d as d$21, f as e$13, g as o$14, h as le$1, i as Gn, l as Y$5, m as l$27, n as Bt$1, o as L$6, p as h$20, r as G$6, s as Wn, t as At$2, u as Zn, v as qt, x as zt$1, y as s$20 } from "./p-Ct2aBEue-ryzz5GeS.js";
 import { n as o$15, t as d$22 } from "./p-ZjP4CjeZ-B7n67IAv.js";
-import { a as U$4, c as l$28, d as t$14, f as v$16, i as M$8, l as r$32, n as E$7, o as W$6, p as r$31, r as L$7, s as c$32, t as A$5, u as s$21 } from "./p-LkEGRiq0-BtGRlLH2.js";
+import { a as U$4, c as l$28, d as t$14, f as v$16, i as M$8, l as r$32, n as E$7, o as W$6, p as r$31, r as L$7, s as c$32, t as A$5, u as s$21 } from "./p-LkEGRiq0-CgU-aMEM.js";
 import { S as r$33, _ as u$21, a as f$26, b as x$14, c as k$14, d as n$17, f as o$16, g as s$22, h as r$34, i as d$23, l as l$29, m as q$5, n as b$21, o as h$21, p as p$30, r as c$33, s as j$6, t as _$4, u as m$27, v as v$17, y as w$15 } from "./p-CUQjkOdi-Bb8WioTB.js";
 import { a as f$27, c as l$30, d as p$31, f as r$35, l as m$28, p as u$22, r as d$24, s as i$13, t as a$22, u as n$18 } from "./p-D5_mEbGJ-c-0w6QsC.js";
 import { n as t$15, r as r$36, t as e$15 } from "./p-BMPN55of-B4r78Cog.js";
-// node_modules/rxjs/dist/esm5/internal/observable/forkJoin.js
-function forkJoin() {
-	var args = [];
-	for (var _i = 0; _i < arguments.length; _i++) args[_i] = arguments[_i];
-	var resultSelector = popResultSelector(args);
-	var _a = argsArgArrayOrObject(args), sources = _a.args, keys = _a.keys;
-	var result = new Observable(function(subscriber) {
-		var length = sources.length;
-		if (!length) {
-			subscriber.complete();
-			return;
-		}
-		var values = new Array(length);
-		var remainingCompletions = length;
-		var remainingEmissions = length;
-		var _loop_1 = function(sourceIndex) {
-			var hasValue = false;
-			innerFrom(sources[sourceIndex]).subscribe(createOperatorSubscriber(subscriber, function(value) {
-				if (!hasValue) {
-					hasValue = true;
-					remainingEmissions--;
-				}
-				values[sourceIndex] = value;
-			}, function() {
-				return remainingCompletions--;
-			}, void 0, function() {
-				if (!remainingCompletions || !hasValue) {
-					if (!remainingEmissions) subscriber.next(keys ? createObject(keys, values) : values);
-					subscriber.complete();
-				}
-			}));
-		};
-		for (var sourceIndex = 0; sourceIndex < length; sourceIndex++) _loop_1(sourceIndex);
-	});
-	return resultSelector ? result.pipe(mapOneOrManyArgs(resultSelector)) : result;
-}
-// node_modules/rxjs/dist/esm5/internal/observable/fromEvent.js
-var nodeEventEmitterMethods = ["addListener", "removeListener"];
-var eventTargetMethods = ["addEventListener", "removeEventListener"];
-var jqueryMethods = ["on", "off"];
-function fromEvent(target, eventName, options, resultSelector) {
-	if (isFunction(options)) {
-		resultSelector = options;
-		options = void 0;
-	}
-	if (resultSelector) return fromEvent(target, eventName, options).pipe(mapOneOrManyArgs(resultSelector));
-	var _a = __read(isEventTarget(target) ? eventTargetMethods.map(function(methodName) {
-		return function(handler) {
-			return target[methodName](eventName, handler, options);
-		};
-	}) : isNodeStyleEventEmitter(target) ? nodeEventEmitterMethods.map(toCommonHandlerRegistry(target, eventName)) : isJQueryStyleEventEmitter(target) ? jqueryMethods.map(toCommonHandlerRegistry(target, eventName)) : [], 2), add = _a[0], remove = _a[1];
-	if (!add) {
-		if (isArrayLike(target)) return mergeMap(function(subTarget) {
-			return fromEvent(subTarget, eventName, options);
-		})(innerFrom(target));
-	}
-	if (!add) throw new TypeError("Invalid event target");
-	return new Observable(function(subscriber) {
-		var handler = function() {
-			var args = [];
-			for (var _i = 0; _i < arguments.length; _i++) args[_i] = arguments[_i];
-			return subscriber.next(1 < args.length ? args : args[0]);
-		};
-		add(handler);
-		return function() {
-			return remove(handler);
-		};
-	});
-}
-function toCommonHandlerRegistry(target, eventName) {
-	return function(methodName) {
-		return function(handler) {
-			return target[methodName](eventName, handler);
-		};
-	};
-}
-function isNodeStyleEventEmitter(target) {
-	return isFunction(target.addListener) && isFunction(target.removeListener);
-}
-function isJQueryStyleEventEmitter(target) {
-	return isFunction(target.on) && isFunction(target.off);
-}
-function isEventTarget(target) {
-	return isFunction(target.addEventListener) && isFunction(target.removeEventListener);
-}
-// node_modules/rxjs/dist/esm5/internal/operators/distinctUntilChanged.js
-function distinctUntilChanged(comparator, keySelector) {
-	if (keySelector === void 0) keySelector = identity;
-	comparator = comparator !== null && comparator !== void 0 ? comparator : defaultCompare;
-	return operate(function(source, subscriber) {
-		var previousKey;
-		var first = true;
-		source.subscribe(createOperatorSubscriber(subscriber, function(value) {
-			var currentKey = keySelector(value);
-			if (first || !comparator(previousKey, currentKey)) {
-				first = false;
-				previousKey = currentKey;
-				subscriber.next(value);
-			}
-		}));
-	});
-}
-function defaultCompare(a, b) {
-	return a === b;
-}
 // node_modules/@ionic/angular/dist/common/providers/dom-controller.js
 var DomController = class DomController {
 	/**
@@ -3746,7 +3643,8 @@ function composeAsync(validators) {
 	const presentValidators = validators.filter(isPresent);
 	if (presentValidators.length == 0) return null;
 	return function(control) {
-		return forkJoin(executeValidators(control, presentValidators).map(toObservable)).pipe(map(mergeErrors));
+		const observables = executeValidators(control, presentValidators).map(toObservable);
+		return forkJoin(observables).pipe(map(mergeErrors));
 	};
 }
 function composeAsyncValidators(validators) {

@@ -13,21 +13,21 @@
     <div class="status-bar">
       <div class="sync-info">
         <span class="sync-dot"></span>
-        <span>Atualizado em 22/05, 14:30</span>
+        <span>{{ ultimaAtualizacao }}</span>
       </div>
     </div>
 
     <div class="summary-cards-grid">
       <div class="summary-card">
-        <span class="summary-number">15</span>
+        <span class="summary-number">{{ qtdIniciantes }}</span>
         <span class="summary-label">Iniciantes</span>
       </div>
       <div class="summary-card">
-        <span class="summary-number">18</span>
+        <span class="summary-number">{{ qtdIntermediarios }}</span>
         <span class="summary-label">Intermediários</span>
       </div>
       <div class="summary-card">
-        <span class="summary-number">9</span>
+        <span class="summary-number">{{ qtdProfissionais }}</span>
         <span class="summary-label">Profissionais</span>
       </div>
     </div>
@@ -51,29 +51,29 @@
 
         <div class="bars-area">
           <div class="bar-col">
-            <span class="bar-top-val">15</span>
-            <div class="bar-柱" style="height: 75%;"></div>
+            <span class="bar-top-val">{{ qtdIniciantes }}</span>
+            <div class="bar-column" [style.height.%]="(qtdIniciantes / 20) * 100"></div>
             <span class="bar-cat">Iniciante</span>
           </div>
 
           <div class="bar-col">
-            <span class="bar-top-val">18</span>
-            <div class="bar-柱 highlight" style="height: 90%;"></div>
+            <span class="bar-top-val">{{ qtdIntermediarios }}</span>
+            <div class="bar-column intermediario" [style.height.%]="(qtdIntermediarios / 20) * 100"></div>
             <span class="bar-cat">Intermediário</span>
           </div>
 
           <div class="bar-col">
-            <span class="bar-top-val">9</span>
-            <div class="bar-柱" style="height: 45%;"></div>
+            <span class="bar-top-val">{{ qtdProfissionais }}</span>
+            <div class="bar-column profissional" [style.height.%]="(qtdProfissionais / 20) * 100"></div>
             <span class="bar-cat">Profissional</span>
           </div>
         </div>
 
         <svg class="trend-overlay-svg" viewBox="0 0 300 120" preserveAspectRatio="none">
-          <path d="M 60 70 L 165 52 L 270 85" fill="none" stroke="#121117" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="60" cy="70" r="4" fill="#121117" />
-          <circle cx="165" cy="52" r="4" fill="#121117" />
-          <circle cx="270" cy="85" r="4" fill="#121117" />
+          <path [attr.d]="'M 52 ' + (90 - (qtdIniciantes * 5)) + ' L 150 ' + (90 - (qtdIntermediarios * 5)) + ' L 248 ' + (90 - (qtdProfissionais * 5))" fill="none" stroke="#121117" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle [attr.cx]="52" [attr.cy]="90 - (qtdIniciantes * 5)" r="4" fill="#121117" />
+          <circle [attr.cx]="150" [attr.cy]="90 - (qtdIntermediarios * 5)" r="4" fill="#121117" />
+          <circle [attr.cx]="248" [attr.cy]="90 - (qtdProfissionais * 5)" r="4" fill="#121117" />
         </svg>
       </div>
     </div>
@@ -82,55 +82,35 @@
       <h2 class="card-section-title">Recomendações por cliente</h2>
       
       <div class="clients-list">
-        <!-- Cliente 1 -->
-        <div class="client-item">
+        <!-- Lista dinâmica baseada no DatabaseService -->
+        <div class="client-item" *ngFor="let cliente of listaClientes">
           <div class="client-header-row">
             <div class="client-avatar-name">
-              <div class="avatar-circle">MS</div>
+              <div class="avatar-circle" [ngClass]="{
+                'iniciante': cliente.nivel === 'Iniciante',
+                'intermediario': cliente.nivel === 'Intermediário',
+                'profissional': cliente.nivel === 'Profissional'
+              }">
+                {{ cliente.iniciais }}
+              </div>
               <div class="client-text-info">
-                <h3 class="client-name">Mariana Souza</h3>
-                <p class="client-time">Última compra há 12 dias</p>
+                <h3 class="client-name">{{ cliente.nome }}</h3>
+                <p class="client-time">Última compra há {{ cliente.diasUltimaCompra }} dias</p>
               </div>
             </div>
-            <span class="level-badge">Intermediário</span>
+            
+            <span class="level-badge" [ngClass]="{
+              'iniciante': cliente.nivel === 'Iniciante',
+              'intermediario': cliente.nivel === 'Intermediário',
+              'profissional': cliente.nivel === 'Profissional'
+            }">
+              {{ cliente.nivel }}
+            </span>
           </div>
-          <div class="client-suggestion">
-            <ion-icon name="bulb-outline" class="bulb-icon"></ion-icon>
-            <span>Sugestão: pedais de gama média</span>
-          </div>
-        </div>
 
-        <div class="client-item">
-          <div class="client-header-row">
-            <div class="client-avatar-name">
-              <div class="avatar-circle dark">CA</div>
-              <div class="client-text-info">
-                <h3 class="client-name">Carlos Almeida</h3>
-                <p class="client-time">Última compra há 5 dias</p>
-              </div>
-            </div>
-            <span class="level-badge dark">Profissional</span>
-          </div>
           <div class="client-suggestion">
             <ion-icon name="bulb-outline" class="bulb-icon"></ion-icon>
-            <span>Sugestão: guitarras de linha premium</span>
-          </div>
-        </div>
-
-        <div class="client-item">
-          <div class="client-header-row">
-            <div class="client-avatar-name">
-              <div class="avatar-circle">AB</div>
-              <div class="client-text-info">
-                <h3 class="client-name">Ana Beatriz</h3>
-                <p class="client-time">Última compra há 3 dias</p>
-              </div>
-            </div>
-            <span class="level-badge">Iniciante</span>
-          </div>
-          <div class="client-suggestion">
-            <ion-icon name="bulb-outline" class="bulb-icon"></ion-icon>
-            <span>Sugestão: kit com afinador e capa</span>
+            <span>Sugestão: {{ cliente.sugestaoCompra }}</span>
           </div>
         </div>
       </div>

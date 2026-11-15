@@ -4,10 +4,9 @@
     <header class="header-section">
       <div class="brand-box">
         <div class="brand-icon-wrapper">
-          <!-- Ícone Vetorial do Diapasão (mesmo da Splash) -->
           <svg class="tuning-fork-small" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="27" y="34" width="5" height="16" rx="2.5" fill="#8B6EFF"/>
-            <path d="M36 24H48V60C48 66.6274 53.3726 72 60 72C66.6274 72 72 66.6274 72 60V24H84V60C84 71.1583 76.3822 80.5318 66 83.2266V92H78V102H42V92H54V83.2266C43.6178 80.5318 36 71.1583 36 60V24Z" fill="#F4F4F6"/>
+            <path d="M36 24H48V60C48 66.6274 53.3726 72 60 72C66.6274 72 72 66.6274 72 60V24H84V60C84 71.1583 76.3822 80.5318 66 83.2266V92H78V102H42V92H54V83.2266C43.6178 80.5318 36 71.1583 36 60V24Z" fill="#121117"/>
             <rect x="72" y="36" width="12" height="5" fill="#8B6EFF"/>
             <rect x="72" y="45" width="12" height="5" fill="#8B6EFF"/>
             <rect x="88" y="34" width="5" height="18" rx="2.5" fill="#8B6EFF"/>
@@ -22,15 +21,15 @@
     </header>
 
     <div class="status-bar">
-      <span class="current-date">QUINTA, 22 DE MAIO</span>
+      <span class="current-date">{{ dataAtual }}</span>
       <div class="sync-info">
         <span class="sync-dot"></span>
-        <span>Atualizado em 22/05, 14:30</span>
+        <span>{{ ultimaAtualizacao }}</span>
       </div>
     </div>
 
     <section class="welcome-section">
-      <h1 class="greeting-title">Boa tarde!</h1>
+      <h1 class="greeting-title">{{ saudacao }}</h1>
       <p class="greeting-subtitle">Seu negócio está afinado hoje.</p>
     </section>
 
@@ -45,9 +44,9 @@
             <ion-icon name="alert-circle-outline"></ion-icon>
           </div>
           <div class="metric-info">
-            <h2 class="metric-value">5 produtos encalhados</h2>
-            <p class="metric-detail">12 itens em alta no mercado</p>
-            <p class="metric-subdetail">1 item deve ser reposto</p>
+            <h2 class="metric-value">{{ qtdEncalhados }} {{ qtdEncalhados === 1 ? 'produto encalhado' : 'produtos encalhados' }}</h2>
+            <p class="metric-detail">{{ qtdEmAlta }} {{ qtdEmAlta === 1 ? 'item em alta' : 'itens em alta' }} no mercado</p>
+            <p class="metric-subdetail">{{ qtdParaRepor }} {{ qtdParaRepor === 1 ? 'item deve ser reposto' : 'itens devem ser repostos' }}</p>
           </div>
         </div>
         <div class="card-footer-action">
@@ -57,7 +56,6 @@
         </div>
       </div>
 
-      <!-- Card: Meu Preço -->
       <div class="metric-card" (click)="irPara('preco')">
         <div class="card-header">
           <span class="card-title">Meu preço</span>
@@ -67,8 +65,8 @@
             <span class="currency-symbol">$</span>
           </div>
           <div class="metric-info">
-            <h2 class="metric-value">8 produtos fora da margem</h2>
-            <p class="metric-detail">Diferença média: +14% vs. mercado</p>
+            <h2 class="metric-value">{{ qtdForaDaMargem }} {{ qtdForaDaMargem === 1 ? 'produto fora' : 'produtos fora' }} da margem</h2>
+            <p class="metric-detail">Diferença média: {{ diferencaMediaMercado >= 0 ? '+' : '' }}{{ diferencaMediaMercado }}% vs. mercado</p>
           </div>
         </div>
         <div class="card-footer-action">
@@ -87,8 +85,8 @@
             <ion-icon name="people-outline"></ion-icon>
           </div>
           <div class="metric-info">
-            <h2 class="metric-value">42 clientes</h2>
-            <p class="metric-detail">Predominância: Intermediário</p>
+            <h2 class="metric-value">{{ totalClientes }} {{ totalClientes === 1 ? 'cliente' : 'clientes' }}</h2>
+            <p class="metric-detail">Predominância: {{ nivelPredominante }}</p>
           </div>
         </div>
         <div class="card-footer-action">

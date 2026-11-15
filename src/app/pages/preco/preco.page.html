@@ -13,62 +13,43 @@
     <div class="status-bar">
       <div class="sync-info">
         <span class="sync-dot"></span>
-        <span>Atualizado em 22/05, 14:30</span>
+        <span>Sincronizado com o banco local</span>
       </div>
     </div>
 
     <div class="summary-cards-grid">
       <div class="summary-card">
-        <span class="summary-number">8</span>
+        <span class="summary-number">{{ totalForaMargem }}</span>
         <span class="summary-label">fora da margem</span>
       </div>
       <div class="summary-card">
-        <span class="summary-number">34</span>
+        <span class="summary-number">{{ totalDentroMargem }}</span>
         <span class="summary-label">dentro da margem</span>
       </div>
       <div class="summary-card">
-        <span class="summary-number highlight">+14</span>
-        <span class="summary-label">Diferença</span>
+        <span class="summary-number highlight">{{ diferencaMedia > 0 ? '+' + diferencaMedia : diferencaMedia }}%</span>
+        <span class="summary-label">Diferença média</span>
       </div>
     </div>
 
     <div class="content-card">
       <h2 class="card-section-title">Diferença vs. mercado (%)</h2>
-      <div class="chart-subtitle">margem 10%</div>
+      <div class="chart-subtitle">margem {{ MARGEM_TOLERADA }}%</div>
 
       <div class="bars-chart-container">
         <div class="target-line"></div>
 
-        <div class="bar-row">
-          <span class="bar-label">Violão G. N1</span>
+        <div class="bar-row" *ngFor="let p of produtos">
+          <span class="bar-label">{{ p.nome }}</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width: 85%;"></div>
+            <div class="bar-fill" 
+                 [ngClass]="{'low-margin': MathAbs(calcularDiferencaPercentual(p.precoLoja, p.precoMercado)) <= MARGEM_TOLERADA}" 
+                 [style.width.%]="MathMin(MathAbs(calcularDiferencaPercentual(p.precoLoja, p.precoMercado)) * 5, 100)">
+            </div>
           </div>
-          <span class="bar-value">+19%</span>
-        </div>
-
-        <div class="bar-row">
-          <span class="bar-label">Pedal Boss D</span>
-          <div class="bar-track">
-            <div class="bar-fill" style="width: 65%;"></div>
-          </div>
-          <span class="bar-value">+14%</span>
-        </div>
-
-        <div class="bar-row">
-          <span class="bar-label">Cordas Sol</span>
-          <div class="bar-track">
-            <div class="bar-fill" style="width: 55%;"></div>
-          </div>
-          <span class="bar-value">+12%</span>
-        </div>
-
-        <div class="bar-row">
-          <span class="bar-label">Teclado Mi2</span>
-          <div class="bar-track">
-            <div class="bar-fill low-margin" style="width: 25%;"></div>
-          </div>
-          <span class="bar-value">+4%</span>
+          <span class="bar-value">
+            {{ calcularDiferencaPercentual(p.precoLoja, p.precoMercado) >= 0 ? '+' : '' }}{{ calcularDiferencaPercentual(p.precoLoja, p.precoMercado) }}%
+          </span>
         </div>
       </div>
     </div>
@@ -77,46 +58,23 @@
       <h2 class="card-section-title">Alertas de preço</h2>
       
       <div class="alerts-list">
-        <!-- Alerta 1 -->
-        <div class="alert-item">
+        <div *ngIf="produtosForaDaMargem.length === 0" class="empty-alerts" style="padding: 16px; text-align: center; color: var(--ion-color-medium);">
+          Nenhum produto fora da margem no momento.
+        </div>
+
+        <div class="alert-item" *ngFor="let p of produtosForaDaMargem">
           <div class="alert-info">
-            <h3 class="item-name">Violão G. N1</h3>
-            <p class="store-price">Loja R$ 1.490</p>
-            <p class="market-price">Mercado R$ 1.250 · Mercado Livre</p>
+            <h3 class="item-name">{{ p.nome }}</h3>
+            <p class="store-price">Loja R$ {{ p.precoLoja | number:'1.2-2' }}</p>
+            <p class="market-price">Mercado R$ {{ p.precoMercado | number:'1.2-2' }} · Mercado Livre</p>
           </div>
           <div class="alert-trend">
             <svg class="trend-line-svg" viewBox="0 0 50 20" fill="none">
               <path d="M2 15L15 12L28 14L48 4" stroke="#121117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span class="trend-badge pos">+19%</span>
-          </div>
-        </div>
-
-        <div class="alert-item">
-          <div class="alert-info">
-            <h3 class="item-name">Pedal Boss D</h3>
-            <p class="store-price">Loja R$ 570</p>
-            <p class="market-price">Mercado R$ 500 · Amazon</p>
-          </div>
-          <div class="alert-trend">
-            <svg class="trend-line-svg" viewBox="0 0 50 20" fill="none">
-              <path d="M2 16L14 13L26 15L48 5" stroke="#121117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="trend-badge pos">+14%</span>
-          </div>
-        </div>
-
-        <div class="alert-item">
-          <div class="alert-info">
-            <h3 class="item-name">Cordas Sol</h3>
-            <p class="store-price">Loja R$ 112</p>
-            <p class="market-price">Mercado R$ 100 · Shopee</p>
-          </div>
-          <div class="alert-trend">
-            <svg class="trend-line-svg" viewBox="0 0 50 20" fill="none">
-              <path d="M2 14L15 11L27 13L48 6" stroke="#121117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="trend-badge pos">+12%</span>
+            <span class="trend-badge pos">
+              +{{ calcularDiferencaPercentual(p.precoLoja, p.precoMercado) }}%
+            </span>
           </div>
         </div>
       </div>

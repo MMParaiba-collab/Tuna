@@ -192,19 +192,23 @@
         margin-bottom: 4px;
       }
 
-      .bar-柱 {
+      .bar-column {
         width: 28px;
-        background: #E4E4E7;
+        background: #121117; 
         border-radius: 6px 6px 0 0;
 
-        &.highlight {
-          background: #D4D4D8;
+        &.intermediario {
+          background: #A1A1AA; 
+        }
+
+        &.profissional {
+          background: #7C5DFA; 
         }
       }
 
       .bar-cat {
         position: absolute;
-        bottom: -2px;
+        bottom: -18px;
         font-size: 11px;
         font-weight: 600;
         color: #52525B;
@@ -264,6 +268,22 @@
             background: #121117;
             color: #FFFFFF;
           }
+
+          // Cores dinâmicas para o avatar de acordo com o nível
+          &.iniciante {
+            background: #121117;
+            color: #FFFFFF;
+          }
+
+          &.intermediario {
+            background: #A1A1AA;
+            color: #FFFFFF;
+          }
+
+          &.profissional {
+            background: #7C5DFA;
+            color: #FFFFFF;
+          }
         }
 
         .client-text-info {
@@ -293,6 +313,25 @@
 
         &.dark {
           background: #121117;
+          color: #FFFFFF;
+          border: none;
+        }
+
+        // Cores dinâmicas para o badge de nível
+        &.iniciante {
+          background: #121117;
+          color: #FFFFFF;
+          border: none;
+        }
+
+        &.intermediario {
+          background: #A1A1AA;
+          color: #FFFFFF;
+          border: none;
+        }
+
+        &.profissional {
+          background: #7C5DFA;
           color: #FFFFFF;
           border: none;
         }

@@ -1,108 +1,99 @@
 <ion-content [fullscreen]="true" class="estoque-content">
   <div class="estoque-container">
-    
+
+    <!-- Cabeçalho idêntico ao wireframe + Botão RF01 -->
     <header class="header-section">
-      <div class="brand-box">
-        <div class="brand-icon-wrapper">
-          <ion-icon name="cube-outline" class="header-icon"></ion-icon>
-        </div>
-        <span class="brand-name">Meu estoque</span>
+      <div class="title-row">
+        <h1 class="page-title">Meu estoque</h1>
+        <button class="btn-importar" (click)="sincronizarDados(false)">
+          <ion-icon name="cloud-download-outline"></ion-icon>
+          <span>Importar / Sincronizar</span>
+        </button>
+      </div>
+
+      <div class="sync-info">
+        <span class="sync-dot"></span>
+        <span>{{ ultimaAtualizacao }}</span>
       </div>
     </header>
 
-    <div class="status-bar">
-      <div class="sync-info">
-        <span class="sync-dot"></span>
-        <span>Atualizado em 22/05, 14:30</span>
+    <!-- 3 Cards Superiores -->
+    <div class="top-metrics-grid">
+      <div class="metric-box">
+        <span class="metric-number">{{ qtdEmAlta }}</span>
+        <span class="metric-label">em alta</span>
+      </div>
+
+      <div class="metric-box">
+        <span class="metric-number">{{ qtdEncalhados }}</span>
+        <span class="metric-label">encalhados</span>
+      </div>
+
+      <div class="metric-box">
+        <span class="metric-number">{{ qtdParaRepor }}</span>
+        <span class="metric-label">para repor</span>
       </div>
     </div>
 
-    <div class="summary-cards-grid">
-      <div class="summary-card">
-        <span class="summary-number">12</span>
-        <span class="summary-label">em alta</span>
-      </div>
-      <div class="summary-card">
-        <span class="summary-number">5</span>
-        <span class="summary-label">encalhados</span>
-      </div>
-      <div class="summary-card">
-        <span class="summary-number">1</span>
-        <span class="summary-label">para repor</span>
-      </div>
-    </div>
+    <!-- Card: Produtos por situação -->
+    <section class="wireframe-card">
+      <h2 class="card-title">Produtos por situação</h2>
 
-    <div class="content-card">
-      <h2 class="card-section-title">Produtos por situação</h2>
-      
-      <div class="chart-flex-box">
-        <div class="legend-list">
-          <div class="legend-item">
-            <span class="dot high"></span>
-            <span class="legend-text">Em alta</span>
-          </div>
-          <div class="legend-item">
-            <span class="dot neutral"></span>
-            <span class="legend-text">Sem tendência</span>
-          </div>
-          <div class="legend-item">
-            <span class="dot low"></span>
-            <span class="legend-text">Encalhados</span>
-          </div>
-        </div>
+      <div class="chart-row">
+        <!-- Legenda à esquerda -->
+        <ul class="chart-legend">
+          <li>
+            <span class="dot dot-alta"></span>
+            <span>Em alta</span>
+          </li>
+          <li>
+            <span class="dot dot-sem-tendencia"></span>
+            <span>Sem tendência</span>
+          </li>
+          <li>
+            <span class="dot dot-encalhados"></span>
+            <span>Encalhados</span>
+          </li>
+        </ul>
 
-        <div class="donut-chart-wrapper">
-          <svg class="donut-svg" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#F4F4F6" stroke-width="14"></circle>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#121117" stroke-width="14" 
-                    stroke-dasharray="150 240" stroke-dashoffset="0"></circle>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#7C5DFA" stroke-width="14" 
-                    stroke-dasharray="65 240" stroke-dashoffset="-150"></circle>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#E4E4E7" stroke-width="14" 
-                    stroke-dasharray="24 240" stroke-dashoffset="-215"></circle>
-          </svg>
-          <span class="chart-label label-12">12</span>
-          <span class="chart-label label-5">5</span>
-          <span class="chart-label label-1">1</span>
+<!-- Gráfico Donut à direita -->
+        <div class="donut-wrapper">
+          <div class="donut-chart" [style.background]="graficoDonutStyle">
+            <div class="donut-hole"></div>
+          </div>
+          <!-- Números posicionados de forma exata -->
+          <span class="num-pos num-encalhados">{{ qtdEncalhados }}</span>
+          <span class="num-pos num-sem-tendencia">{{ qtdSemTendencia }}</span>
+          <span class="num-pos num-em-alta">{{ qtdEmAlta }}</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="content-card">
-      <h2 class="card-section-title">Recomendações</h2>
-      <ul class="bullet-list">
-        <li>
-          <span class="bullet-dot"></span>
-          <span>Repor Encordoamento Elixir p/ Guitarra 0.9</span>
-        </li>
-        <li>
-          <span class="bullet-dot"></span>
-          <span>Repor Kit de Palhetas Solar</span>
-        </li>
-        <li>
-          <span class="bullet-dot"></span>
-          <span>Repor Pratos Solar</span>
-        </li>
-        <li>
-          <span class="bullet-dot"></span>
-          <span>Revisar Piano Yamaha (1 ano em estoque)</span>
-        </li>
-      </ul>
-    </div>
+    <!-- Card: Recomendações -->
+    <section class="wireframe-card">
+      <h2 class="card-title">Recomendações</h2>
 
-    <div class="content-card">
-      <h2 class="card-section-title">Oportunidades</h2>
       <ul class="bullet-list">
-        <li>
-          <span class="bullet-dot purple"></span>
-          <span>Pedal Distortion Boss GT-1</span>
-        </li>
-        <li>
-          <span class="bullet-dot purple"></span>
-          <span>Bateria MasterDrums TCH-45P</span>
-        </li>
+        @for (rec of recomendacoes; track rec) {
+          <li>{{ rec }}</li>
+        } @empty {
+          <li>Nenhuma recomendação pendente no momento.</li>
+        }
       </ul>
-    </div>
+    </section>
+
+    <!-- Card: Oportunidades -->
+    <section class="wireframe-card">
+      <h2 class="card-title">Oportunidades</h2>
+
+      <ul class="bullet-list">
+        @for (op of oportunidades; track op) {
+          <li>{{ op }}</li>
+        } @empty {
+          <li>Nenhum produto em destaque no momento.</li>
+        }
+      </ul>
+    </section>
 
   </div>
 </ion-content>

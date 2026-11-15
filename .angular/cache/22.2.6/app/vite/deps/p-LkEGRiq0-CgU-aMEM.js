@@ -277,7 +277,7 @@ var g = (n) => {
 	e.classList.remove("ion-page-invisible"), e.style.removeProperty("pointer-events"), void 0 !== i && (i.classList.remove("ion-page-invisible"), i.style.removeProperty("pointer-events")), w(e);
 };
 var h = async (n) => {
-	if (n.leavingEl && n.animated && 0 !== n.duration) return n.animationBuilder ? n.animationBuilder : "ios" === n.mode ? (await import("./standalone-D217rFCN.js").then((n) => n.un)).iosTransitionAnimation : (await import("./standalone-D217rFCN.js").then((n) => n.cn)).mdTransitionAnimation;
+	if (n.leavingEl && n.animated && 0 !== n.duration) return n.animationBuilder ? n.animationBuilder : "ios" === n.mode ? (await import("./standalone-C9UkL9om.js").then((n) => n.un)).iosTransitionAnimation : (await import("./standalone-C9UkL9om.js").then((n) => n.cn)).mdTransitionAnimation;
 };
 var y = async (n, e) => {
 	await k(e, !0);

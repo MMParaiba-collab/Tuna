@@ -1,60 +1,32 @@
+export type SituacaoEstoque = 'em_alta' | 'sem_tendencia' | 'encalhado' | 'repor';
+export type NivelCliente = 'Iniciante' | 'Intermediário' | 'Profissional';
+
 export interface Produto {
-  id?: number;
-  codigo: string;
+  id: string;
   nome: string;
   categoria: string;
-  marca?: string;
-  preco: number;
-  quantidade: number;
-  data_atualizacao: string;
-}
-
-export interface Tendencia {
-  id?: number;
-  categoria: string;
-  marca?: string;
-  indice_popularidade: number;
-  fonte: string;
-  data_coleta: string;
-}
-
-export interface PrecoConcorrente {
-  id?: number;
-  produto_id: number;
-  concorrente: string;
-  preco: number;
-  fonte: string;
-  data_coleta: string;
+  precoLoja: number;
+  precoMercado: number;
+  fonteMercado: 'Mercado Livre' | 'Amazon' | 'Shopee';
+  quantidadeEstoque: number;
+  estoqueMinimo: number;
+  diasSemVenda: number;
+  vendasUltimos30Dias: number;
+  situacao: SituacaoEstoque;
 }
 
 export interface Cliente {
-  id?: number;
+  id: string;
   nome: string;
-  telefone?: string;
-  email?: string;
-  nivel: 'Iniciante' | 'Intermediário' | 'Profissional';
-  data_atualizacao: string;
+  iniciais: string;
+  nivel: NivelCliente;
+  diasUltimaCompra: number;
+  totalGasto: number;
+  ativo30Dias: boolean;
+  sugestaoCompra: string;
 }
 
-export interface Venda {
-  id?: number;
-  cliente_id: number;
-  data_venda: string;
-  total: number;
-}
-
-export interface ItemVenda {
-  id?: number;
-  venda_id: number;
-  produto_id: number;
-  quantidade: number;
-  preco_unitario: number;
-}
-
-export interface SyncLog {
-  id?: number;
-  tipo: string;
-  data_sync: string;
-  status: string;
-  registros: number;
+export interface SincronizacaoStatus {
+  ultimaAtualizacao: string;
+  modoOffline: boolean;
 }
