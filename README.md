@@ -15,6 +15,7 @@ Aplicativo móvel desenvolvido para o Projeto Integrador VI-B (Turma MA - TAS813
 7. [Geração do arquivo APK](#7-geração-do-arquivo-apk)
 8. [Tecnologias, bibliotecas e linguagens](#8-tecnologias-bibliotecas-e-linguagens)
 9. [Banco de dados local](#9-banco-de-dados-local)
+10.[Arquivo APK](#10-arquivo-apk)
 
 ---
 
@@ -528,6 +529,10 @@ As informações armazenadas serão utilizadas nas principais funcionalidades do
 - **Meu Estoque:** permitirá consultar os produtos, suas quantidades e informações relacionadas às tendências.
 - **Meu Preço:** utilizará os preços dos produtos e dos concorrentes para facilitar a comparação.
 - **Meu Cliente:** permitirá consultar os clientes e seu histórico de compras, ajudando na classificação e na identificação de produtos que podem ser interessantes para cada cliente.
+
+---
+
+### 10. Arquivo APK
 
 
 
