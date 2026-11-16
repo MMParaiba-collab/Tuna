@@ -1,75 +1,81 @@
 {
-  "hash": "8a5d96c2",
-  "configHash": "9ae76ac6",
-  "lockfileHash": "c3417e06",
-  "browserHash": "d634f313",
+  "hash": "416b36cb",
+  "configHash": "aaa9169c",
+  "lockfileHash": "a481929b",
+  "browserHash": "6303b612",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e8014bd6",
+      "fileHash": "52c8e59e",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "b8e05538",
+      "fileHash": "c99e07e1",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "75007de3",
+      "fileHash": "f6eaea1e",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "d21c2b79",
+      "fileHash": "fb3d5cd1",
+      "needsInterop": false
+    },
+    "@capacitor-community/sqlite": {
+      "src": "../../../../../../node_modules/@capacitor-community/sqlite/dist/esm/index.js",
+      "file": "@capacitor-community_sqlite.js",
+      "fileHash": "7d99d7cb",
+      "needsInterop": false
+    },
+    "@capacitor/core": {
+      "src": "../../../../../../node_modules/@capacitor/core/dist/index.js",
+      "file": "@capacitor_core.js",
+      "fileHash": "0f2bd922",
       "needsInterop": false
     },
     "@ionic/angular": {
       "src": "../../../../../../node_modules/@ionic/angular/dist/standalone/index.js",
       "file": "@ionic_angular.js",
-      "fileHash": "fb48dea3",
+      "fileHash": "dd79b9ab",
       "needsInterop": false
     },
     "ionicons": {
       "src": "../../../../../../node_modules/ionicons/dist/index.js",
       "file": "ionicons.js",
-      "fileHash": "79b33270",
+      "fileHash": "3c3ddd82",
       "needsInterop": false
     },
     "ionicons/icons": {
       "src": "../../../../../../node_modules/ionicons/icons/index.mjs",
       "file": "ionicons_icons.js",
-      "fileHash": "e97c667e",
+      "fileHash": "5bda2ed2",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "26947a77",
-      "needsInterop": false
-    },
-    "tslib": {
-      "src": "../../../../../../node_modules/tslib/tslib.es6.mjs",
-      "file": "tslib.js",
-      "fileHash": "297e4dd0",
+      "fileHash": "7d9c70f1",
       "needsInterop": false
     }
   },
   "chunks": {
-    "common-D-JdArM9": {
-      "file": "common-D-JdArM9.js",
+    "common-DxHXkKn0": {
+      "file": "common-DxHXkKn0.js",
       "isDynamicEntry": false
     },
-    "core-BZW6NvO3": {
-      "file": "core-BZW6NvO3.js",
+    "core-xkM-vyY1": {
+      "file": "core-xkM-vyY1.js",
       "isDynamicEntry": false
     },
-    "esm5-O02WYnMD": {
-      "file": "esm5-O02WYnMD.js",
+    "esm5-DEDS8vAY": {
+      "file": "esm5-DEDS8vAY.js",
       "isDynamicEntry": false
     },
     "p-BBsseItU-Bo_S4qQL": {
@@ -108,25 +114,29 @@
       "file": "p-Ds5vN3iu-WXQyl080.js",
       "isDynamicEntry": true
     },
-    "p-LkEGRiq0-CgU-aMEM": {
-      "file": "p-LkEGRiq0-CgU-aMEM.js",
+    "p-LkEGRiq0-Dr6F-nF7": {
+      "file": "p-LkEGRiq0-Dr6F-nF7.js",
       "isDynamicEntry": false
     },
     "p-ZjP4CjeZ-B7n67IAv": {
       "file": "p-ZjP4CjeZ-B7n67IAv.js",
       "isDynamicEntry": false
     },
-    "platform-browser-7YcSufbI": {
-      "file": "platform-browser-7YcSufbI.js",
+    "platform-browser-qen7DjgU": {
+      "file": "platform-browser-qen7DjgU.js",
       "isDynamicEntry": false
     },
-    "router-DWzh1Xdv": {
-      "file": "router-DWzh1Xdv.js",
+    "router-Dwe5E9l5": {
+      "file": "router-Dwe5E9l5.js",
       "isDynamicEntry": false
     },
-    "standalone-C9UkL9om": {
-      "file": "standalone-C9UkL9om.js",
+    "standalone-wzYE5up5": {
+      "file": "standalone-wzYE5up5.js",
       "isDynamicEntry": false
+    },
+    "web-Cg4TdQLN": {
+      "file": "web-Cg4TdQLN.js",
+      "isDynamicEntry": true
     }
   }
 }

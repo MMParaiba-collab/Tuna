@@ -1,7 +1,7 @@
 ion-tab-bar {
   background: #FFFFFF;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.03);
 
   ion-tab-button {
