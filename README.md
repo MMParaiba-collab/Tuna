@@ -534,6 +534,8 @@ As informações armazenadas serão utilizadas nas principais funcionalidades do
 
 ### 10. Arquivo APK
 
+[![Baixar APK](https://img.shields.io/badge/Download-APK-blue?style=for-the-badge&logo=android)](https://github.com/MMParaiba-collab/Tuna/releases/tag/v1.0.0)
+
 
 
 
