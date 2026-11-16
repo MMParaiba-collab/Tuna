@@ -105,7 +105,7 @@ export class HomePage implements OnInit {
 
     const produtosFora = produtos.filter(p => {
       const diff = ((p.precoLoja - p.precoMercado) / p.precoMercado) * 100;
-      return Math.abs(diff) > 10; // Ajustado para considerar tanto acima quanto abaixo de 10% em módulo
+      return Math.abs(diff) > 10; 
     });
 
     this.qtdForaDaMargem = produtosFora.length;
