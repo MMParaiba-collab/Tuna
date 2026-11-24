@@ -15,7 +15,7 @@ Aplicativo móvel desenvolvido para o Projeto Integrador VI-B (Turma MA - TAS813
 7. [Geração do arquivo APK](#7-geração-do-arquivo-apk)
 8. [Tecnologias, bibliotecas e linguagens](#8-tecnologias-bibliotecas-e-linguagens)
 9. [Banco de dados local](#9-banco-de-dados-local)
-10. [Arquivo APK e Vídeo](#10-arquivo-apk)
+10. [Arquivo APK e Vídeo](#10-arquivo-apk-e-video)
 
 ---
 
